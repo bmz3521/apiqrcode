@@ -2,7 +2,7 @@
 
  -> npm install <-
 ##### ----------------------------------------------------
-# if you would like to use nodemon can setup package in below.
+### if you would like to use nodemon can setup package in below.
 ##### npm i nodemon -g
 ##### nodemon index.js //run file index.js 
 ##### ----------------------------------------------------
