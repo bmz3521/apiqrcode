@@ -6,12 +6,16 @@ const path = require("path");
 const qrcode = require('qrcode')
 const generatePayload = require('promptpay-qr')
 
-const bankAccount = '0933788230'
-const amount = 200
+// const bankAccount = '0933788230'
+// const amount = 200
+// const desciption = 'รายการสั่งยา Roxytro mizyn'
 
-const payload = generatePayload(bankAccount, { amount })
+// const payload = generatePayload(bankAccount, { amount , desciption})
+const CRC = '37C6'
 
-qrcode.toFile('QrPaymeny/result.png', payload, {
+const codePayment = `00020101021230570016A00000067701011201153110400394751010206REF0010304REF253037645406555.555802TH62100706SCB0016304${CRC}`;
+
+qrcode.toFile('QrPaymeny/result.jpg', codePayment, {
     color: {
         dark: '#000000',
         light: '#ffffff',
@@ -22,7 +26,7 @@ qrcode.toFile('QrPaymeny/result.png', payload, {
   })
   
 app.get('/qr', (req, res) => {
-    res.sendFile(path.join(__dirname, "./QrPaymeny/result.png"));
+    res.sendFile(path.join(__dirname, "./QrPaymeny/result.jpg"));
 })
 
 app.get('/', (req, res) => {
