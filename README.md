@@ -11,6 +11,6 @@
 ##### --------------------------------------------------------------------------------------------------------
 ##### This is example concept for generate qrcode promptpay-qr
 
-##### const bankAccount = '0933788230' //promptpay number
-##### const amount = 200 //price
+##### const CRC = '37C6' //CRC number
+##### codePayment is code for generate Qrcode
 ##### --------------------------------------------------------------------------------------------------------
