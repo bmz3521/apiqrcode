@@ -4,22 +4,16 @@ const port = 3001
 const path = require("path");
 
 const qrcode = require('qrcode')
-const generatePayload = require('promptpay-qr')
 
-// const bankAccount = '0933788230'
-// const amount = 200
-// const desciption = 'รายการสั่งยา Roxytro mizyn'
 
-// const payload = generatePayload(bankAccount, { amount , desciption})
-const CRC = '37C6'
 const accountNumber = '|099400016602811'
 const HN = '370086811'
 const VN = '640337789'
 const amount = '10000' // 10000 = 100.00 Bath
-const codePayment = `${accountNumber}
-${ref1}
-${ref2}
-${amount}`;
+const codePayment = `${accountNumber} 
+${HN}
+${VN}
+${amount}`; // จำเป็นต้องเว้นบรรทัดแบบนี้ครับ  ACCOUNTNUMBER HN VN AMOUNT ต้องแยกกัน
 
 qrcode.toFile('QrPaymeny/result.jpg', codePayment, {
     color: {
