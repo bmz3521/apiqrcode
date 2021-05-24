@@ -12,8 +12,14 @@ const generatePayload = require('promptpay-qr')
 
 // const payload = generatePayload(bankAccount, { amount , desciption})
 const CRC = '37C6'
-
-const codePayment = `00020101021230570016A00000067701011201153110400394751010206REF0010304REF253037645406555.555802TH62100706SCB0016304${CRC}`;
+const accountNumber = '|099400016602811'
+const HN = '370086811'
+const VN = '640337789'
+const amount = '10000' // 10000 = 100.00 Bath
+const codePayment = `${accountNumber}
+${ref1}
+${ref2}
+${amount}`;
 
 qrcode.toFile('QrPaymeny/result.jpg', codePayment, {
     color: {
