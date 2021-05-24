@@ -11,7 +11,6 @@
 ##### --------------------------------------------------------------------------------------------------------
 ##### This is example concept for generate qrcode promptpay-qr
 
-##### const CRC = '37C6' //CRC number
 ##### codePayment is code for generate Qrcode
 ##### --------------------------------------------------------------------------------------------------------
 ### Document qrcode ==> https://www.npmjs.com/package/qrcode#tofilepath-text-options-cberror
